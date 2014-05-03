@@ -363,11 +363,13 @@ int string abc_searchview_description_submit 0x7f0a0007
 int string abc_searchview_description_voice 0x7f0a0008
 int string abc_shareactionprovider_share_with 0x7f0a000c
 int string abc_shareactionprovider_share_with_application 0x7f0a000b
+int string acesso_negado 0x7f0a001f
+int string acesso_negado_para 0x7f0a0020
 int string action_settings 0x7f0a000f
 int string app_name 0x7f0a000d
+int string bem_vindo 0x7f0a001e
 int string btn_cadastre 0x7f0a0013
 int string btn_conectar 0x7f0a0012
-int string budanga 0x7f0a001d
 int string hello_world 0x7f0a000e
 int string input_login 0x7f0a0010
 int string input_senha 0x7f0a0011
@@ -377,6 +379,7 @@ int string label_confirmarSenha 0x7f0a0017
 int string label_email 0x7f0a0018
 int string label_nome 0x7f0a0016
 int string label_salvar 0x7f0a001a
+int string sessao_ativa 0x7f0a001d
 int string title_activity_cadastro 0x7f0a0014
 int string title_activity_primeira 0x7f0a001b
 int string title_criarNovaConta 0x7f0a0015

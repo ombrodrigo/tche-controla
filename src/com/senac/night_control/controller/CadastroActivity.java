@@ -1,25 +1,26 @@
 package com.senac.night_control.controller;
 
-import com.senac.night_control.R;
-import com.senac.night_control.database.UsuarioDao;
-import com.senac.night_control.model.Usuario;
-
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Toast;
-import android.os.Build;
+
+import com.senac.night_control.R;
+import com.senac.night_control.database.UsuarioDao;
+import com.senac.night_control.model.Usuario;
+import com.senac.utilities.VisualUtilities;
 
 public class CadastroActivity extends ActionBarActivity {
 	
@@ -27,6 +28,7 @@ public class CadastroActivity extends ActionBarActivity {
 	private EditText nome,email,login,senha,confirmarSenha;
 	private CheckBox maior;
 	private Button salvar;
+	private VisualUtilities visual;
 	
 
 	@Override
@@ -81,6 +83,7 @@ public class CadastroActivity extends ActionBarActivity {
 	//Instanciar os inputs
 	public void InstanciarVariaveis()
 	{
+		visual=new VisualUtilities();
 		nome=(EditText)findViewById(R.id.et_cad_nome);
 		email=(EditText)findViewById(R.id.et_cad_email);
 		login=(EditText)findViewById(R.id.et_cad_login);
@@ -99,8 +102,19 @@ public class CadastroActivity extends ActionBarActivity {
 			public void onClick(View arg0) {
 				
 				Usuario user=new Usuario(nome.getText().toString(), email.getText().toString(), login.getText().toString(), senha.getText().toString(), true);
-				UsuarioDao usuarioDao=new UsuarioDao(getBaseContext());				
-				usuarioDao.inserir(user);		
+				UsuarioDao usuarioDao=new UsuarioDao(getBaseContext());	
+				
+				try
+				{
+					usuarioDao.inserir(user);
+					
+					
+					
+				}catch(Exception e)
+				{
+					
+				}
+	
 
 
 				
@@ -108,5 +122,8 @@ public class CadastroActivity extends ActionBarActivity {
 			}
 		});
 	}
+	
+	
+
 
 }

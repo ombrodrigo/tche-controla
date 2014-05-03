@@ -33,8 +33,8 @@ public class UsuarioDao extends SQLiteOpenHelper {
 		        " nome TEXT UNIQUE NOT NULL," +
 		        " email TEXT," +
 		        " login TEXT," +
-		        " senha TEXT, " +
-		        " maior Boolean" +
+		        " senha TEXT, " +/*
+		        " maior Boolean" +*/
 		        ");";
 		
 		     db.execSQL(sql);
@@ -61,7 +61,7 @@ public class UsuarioDao extends SQLiteOpenHelper {
 	      valores.put("email", usuario.getEmail());
 	      valores.put("login", usuario.getLogin());
 	      valores.put("senha", usuario.getSenha());
-	      valores.put("maior", usuario.getMaiorDeIdade());
+	      /*valores.put("maior", usuario.getMaiorDeIdade());*/
 	 
 	      getWritableDatabase().insert(TABELA, null, valores);
 	 }
@@ -73,12 +73,12 @@ public class UsuarioDao extends SQLiteOpenHelper {
 	      
 	      while(c.moveToNext()){
 	    	  Usuario usuario = new Usuario(null, null, null, null, null);
-	    	  usuario.setId(c.getInt(0));
-	    	  usuario.setNome(c.getString(1));
-	    	  usuario.setEmail(c.getString(2));
-	    	  usuario.setLogin(c.getString(3));
-	    	  usuario.setSenha(c.getString(4));
-	    	  usuario.setMaiorDeIdade(true);
+
+	    	  usuario.setNome(c.getString(0));
+	    	  usuario.setEmail(c.getString(1));
+	    	  usuario.setLogin(c.getString(2));
+	    	  usuario.setSenha(c.getString(3));
+	    	 /* usuario.setMaiorDeIdade(true);*/
 	 
 	          lista .add(usuario);
 	      }

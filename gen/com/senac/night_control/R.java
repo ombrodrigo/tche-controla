@@ -1177,11 +1177,13 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
+        public static final int acesso_negado=0x7f0a001f;
+        public static final int acesso_negado_para=0x7f0a0020;
         public static final int action_settings=0x7f0a000f;
         public static final int app_name=0x7f0a000d;
+        public static final int bem_vindo=0x7f0a001e;
         public static final int btn_cadastre=0x7f0a0013;
         public static final int btn_conectar=0x7f0a0012;
-        public static final int budanga=0x7f0a001d;
         public static final int hello_world=0x7f0a000e;
         public static final int input_login=0x7f0a0010;
         public static final int input_senha=0x7f0a0011;
@@ -1191,6 +1193,7 @@ containing a value of this type.
         public static final int label_email=0x7f0a0018;
         public static final int label_nome=0x7f0a0016;
         public static final int label_salvar=0x7f0a001a;
+        public static final int sessao_ativa=0x7f0a001d;
         public static final int title_activity_cadastro=0x7f0a0014;
         public static final int title_activity_primeira=0x7f0a001b;
         public static final int title_criarNovaConta=0x7f0a0015;
