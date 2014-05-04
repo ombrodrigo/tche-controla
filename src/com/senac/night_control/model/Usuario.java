@@ -7,20 +7,23 @@ public class Usuario {
 	private String email;
 	private String login;
 	private String senha;
-	private Boolean maiorDeIdade;
+	private String ajuda_Nome;
+	private String ajuda_Telefone;
+	private Boolean sessao_ativa;
 	
 		
 	
 	public Usuario(String nome, String email, String login, String senha,
-			Boolean maiorDeIdade) {
+			String ajuda_Nome, String ajuda_Telefone, Boolean sessao_ativa) {
 		super();
 		this.nome = nome;
 		this.email = email;
 		this.login = login;
 		this.senha = senha;
-		this.maiorDeIdade = maiorDeIdade;
+		this.ajuda_Nome = ajuda_Nome;
+		this.ajuda_Telefone = ajuda_Telefone;
+		this.sessao_ativa = sessao_ativa;
 	}
-	
 	
 	public String getNome() {
 		return nome;
@@ -46,12 +49,7 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public Boolean getMaiorDeIdade() {
-		return maiorDeIdade;
-	}
-	public void setMaiorDeIdade(Boolean maiorDeIdade) {
-		this.maiorDeIdade = maiorDeIdade;
-	}
+
 
 
 	public int getId() {
@@ -62,6 +60,38 @@ public class Usuario {
 	public void setId(int i) {
 		this.id = i;
 	}
+
+
+	public String getAjuda_Nome() {
+		return ajuda_Nome;
+	}
+
+
+	public void setAjuda_Nome(String ajuda_Nome) {
+		this.ajuda_Nome = ajuda_Nome;
+	}
+
+
+	public String getAjuda_Telefone() {
+		return ajuda_Telefone;
+	}
+
+
+	public void setAjuda_Telefone(String ajuda_Telefone) {
+		this.ajuda_Telefone = ajuda_Telefone;
+	}
+
+
+	public Boolean getSessao_ativa() {
+		return sessao_ativa;
+	}
+
+
+	public void setSessao_ativa(Boolean sessao_ativa) {
+		this.sessao_ativa = sessao_ativa;
+	}
+	
+	
 	
 	
 	

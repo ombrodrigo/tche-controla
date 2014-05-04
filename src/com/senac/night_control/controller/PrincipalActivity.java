@@ -115,16 +115,21 @@ public class PrincipalActivity extends ActionBarActivity {
 			public void onClick(View v) {
 				UsuarioDao daoUser=new UsuarioDao(getBaseContext());
 				Boolean achou=false;
-				
-				List<Usuario> usuarios=daoUser.getLista();
-				daoUser.close();
+				List<Usuario> usuarios = null;
+				try {
+					usuarios=daoUser.getLista();
+					daoUser.close();
+					
+					
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
 				
 				
 				for(Usuario usuario: usuarios)
 				{  
 					 if(usuario.getLogin().equals(login.getText().toString()) && usuario.getSenha().equals(senha.getText().toString()))
-					 {	
-						
+					 {							
  
 						GeneratePopupWelcome(this, R.string.bem_vindo ,R.string.sessao_ativa,usuario.getLogin(),visual.SplitName(usuario.getNome()));
 						 achou=true;

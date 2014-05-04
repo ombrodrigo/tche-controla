@@ -17,9 +17,20 @@
     <string name="label_salvar">Salvar</string>
     <string name="title_activity_primeira">Dashboard</string>
      <string name="label_bemVindo">Bem Vindo</string>
-     <string name="sessao_ativa">Bem vindo ao Tchê Controla!</string>
+     <string name="sessao_ativa">Bem vindo ao Tchê Controla</string>
      <string name="bem_vindo">Bem Vindo</string>
      <string name="acesso_negado">Acesso Negado</string>
      <string name="acesso_negado_para">Acesso negado para:</string>
+     <string name="label_ajudaNome">Quem pode me ajudar?</string>
+     <string name="label_ajudaTelefone">Qual o telefone da minha ajuda?</string>
+     <string name="error_confirm_password">A senha não foi confirmada corretamente</string>
+     <string name="error_login_utilizado">Esse login já esta sendo utilizado</string>
+     <string name="error_email">O e-mail inserido não é válido</string>
+     <string name="label_cadastro">Cadastro</string>
+     <string name="label_cadastro_sucess">Cadastro efetuado com sucesso</string>
+      <string name="label_obrigatorio"> é de preenchimento obrigatório</string>
+      <string name="label_e"> e </string>
+       <string name="error_insert">Erro ao inserir o registro no sistema </string>
+
 
 </resources>

@@ -42,5 +42,16 @@ public class VisualUtilities extends ActionBarActivity {
 		
 		return name;
 	}
+	
+	//função que recebe um nome e retorna somente o primeiro e segundo nome
+		public boolean EmailIsValid(String email)
+		{
+			if(email.contains("@"))
+			{
+				return true;
+			}
+			
+			return false;
+		}
 
 }

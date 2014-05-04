@@ -17,27 +17,13 @@
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+            android:layout_width="161dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="80dp"
+            android:layout_weight="0.59"
             android:text="@string/title_criarNovaConta"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linearLayout1"
-        android:layout_below="@+id/linearLayout1"
-        android:layout_marginTop="39dp" >
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_nome"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="12dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -48,30 +34,17 @@
         android:layout_below="@+id/linearLayout2" >
 
         <EditText
-            android:id="@+id/et_cad_nome"
+            android:id="@+id/et_cad_telefone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName" >
+            android:hint="@string/label_ajudaTelefone"
+            android:inputType="phone" >
 
             <requestFocus />
         </EditText>
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/linearLayout3" >
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_email"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
     </LinearLayout>
 
     <LinearLayout
@@ -79,7 +52,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/linearLayout4"
-        android:layout_below="@+id/linearLayout4" >
+        android:layout_below="@+id/linearLayout4"
+        android:layout_marginTop="78dp" >
 
         <EditText
             android:id="@+id/et_cad_email"
@@ -87,6 +61,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:textColorHint="#FF7F50"
+            android:hint="@string/label_email"
             android:inputType="textEmailAddress" />
     </LinearLayout>
 
@@ -103,6 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:textColorHint="#FF7F50"
             android:hint="@string/input_login" />
     </LinearLayout>
 
@@ -119,6 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.58"
             android:ems="10"
+            android:textColorHint="#FF7F50"
             android:hint="@string/input_senha"
             android:inputType="textPassword" />
     </LinearLayout>
@@ -136,31 +114,74 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:textColorHint="#FF7F50"
             android:hint="@string/label_confirmarSenha"
             android:inputType="textPassword" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout9"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linearLayout8"
-        android:layout_below="@+id/linearLayout8" >
-
-        <CheckBox
-            android:id="@+id/input_check_tenho18anos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_18anos" />
     </LinearLayout>
 
     <Button
         android:id="@+id/btn_cad_salvar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout9"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
+        android:layout_alignLeft="@+id/linearLayout9"
+        android:layout_alignParentBottom="true"
+        android:enabled="false"
         android:text="@string/label_salvar" />
+
+    <CheckBox
+        android:id="@+id/input_check_tenho18anos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_cad_salvar"
+        android:layout_below="@+id/linearLayout3"
+        android:text="@string/label_18anos" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout8"
+        android:layout_centerHorizontal="true" >
+
+        <EditText
+            android:id="@+id/et_cad_ajudanome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/label_ajudaNome"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginTop="14dp" >
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_cad_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout5"
+        android:layout_alignRight="@+id/linearLayout5"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/label_nome"
+        android:textColorHint="#FF7F50"
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/input_check_tenho18anos"
+        android:layout_below="@+id/input_check_tenho18anos"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="24dp" >
+    </LinearLayout>
 
 </RelativeLayout>
