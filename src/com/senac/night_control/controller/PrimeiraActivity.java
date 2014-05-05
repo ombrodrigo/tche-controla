@@ -19,8 +19,7 @@ import android.os.Build;
 
 public class PrimeiraActivity extends ActionBarActivity {
 
-	
-	private TextView nome,login;
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -74,12 +73,10 @@ public class PrimeiraActivity extends ActionBarActivity {
 	
 	public void InstanciarVariaveis()
 	{
-		nome=(TextView)findViewById(R.id.tv_bemVindo_nome);
-		login=(TextView)findViewById(R.id.tv_bemVindo_login);
+
 		
 		 Bundle extras = getIntent().getExtras();
-		 nome.setText( extras.getString("nome"));
-		 login.setText( extras.getString("login"));
+
 	} 
 
 }

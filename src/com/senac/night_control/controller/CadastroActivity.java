@@ -162,7 +162,8 @@ public class CadastroActivity extends ActionBarActivity {
 											int[] msg4=new int[1];
 											msg4[0]=R.string.label_cadastro_sucess;
 											
-											GenerateMessage(this, R.string.label_cadastro, msg4);											
+											GenerateMessage(this, R.string.label_cadastro, msg4);	
+											EraseInputs();
 											
 										}catch(Exception e)
 										{
@@ -251,6 +252,19 @@ public class CadastroActivity extends ActionBarActivity {
 		// Set the Icon for the Dialog
 		alertDialog.setIcon(R.drawable.ic_launcher);
 		alertDialog.show();
+	}
+	
+	public void EraseInputs()
+	{
+		nome.setText("");
+		email.setText("");
+		login.setText("");
+		senha.setText("");
+		confirmarSenha.setText("");
+		ajuda_Nome.setText("");
+		ajuda_Telefone.setText("");
+		maior.setChecked(false);
+		salvar.setEnabled(false);
 	}
 	
 	
