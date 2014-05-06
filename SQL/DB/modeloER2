@@ -1,0 +1,31 @@
+usuario
+- nome  
+- sessao_ativa 
+- email
+- senha
+- sexo
+- ajuda_nome - nome da pessoa da ajuda
+- ajuda_numero_telefone  - numero telefone ajuda
+
+
+pub (festa)
+	pub_id
+	nome
+
+bebidas
+	bebida_id
+	bebida
+
+festa 
+	festa_id
+	pub_id
+	comsumo_limite default null comment 'se informado o sistema deve considerar este campo a cada novo consumo',
+	nota_festa default null comment 'o usuário podera definr uma nota para a festa'
+
+festa_consumo
+	festa_consumo_id
+	festa_id
+	bebida_id
+	!valor
+	quantidade_consumo
+	
