@@ -1,17 +1,11 @@
 package com.senac.night_control.database;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.senac.night_control.model.Festa;
-import com.senac.night_control.model.Usuario;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
@@ -34,7 +28,7 @@ public class FestaDao extends SQLiteOpenHelper {
 					" consumo_limite TEXT," +
 					" nota_festa TEXT,"+
 					" FOREIGN KEY (pub_id) REFERENCES Pub (id))," +
-					" FOREIGN KEY (usuario_id) REFERENCES Usuario (id)),";
+					" FOREIGN KEY (usuario_id) REFERENCES Usuario (id))";
 		
 		     db.execSQL(sql);
 		     
@@ -50,8 +44,8 @@ public class FestaDao extends SQLiteOpenHelper {
 	public void inserir(Festa festa) throws SQLException {
 
 		ContentValues valores = new ContentValues();
-			//valores.put("pub_id", festa.getPub_id());
-			//valores.put("usuario_id", festa.getUsuario_id());
+			valores.put("pub_id", festa.getPub_id());
+			valores.put("usuario_id", festa.getUsuario_id());
 	    	valores.put("data_hora", festa.getData_hora());
 	    	valores.put("consumo_limite", festa.getConsumo_limite());
 	    	valores.put("nota_festa", festa.getNota_festa());
