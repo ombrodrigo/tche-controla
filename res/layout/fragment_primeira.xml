@@ -1,7 +1,9 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tableLayout1"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+     >
 
     <!-- 2 columns -->
 
@@ -16,29 +18,30 @@
         
         
         <ImageView
-        android:id="@+id/dash_cadastro"
+        android:id="@+id/dash_consumo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/user_icon"
+        android:src="@drawable/add"
         android:clickable="True"
         android:layout_marginLeft="40dp"
+
        />
           
        <ImageView
         android:id="@+id/dash_festas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/disc_icon"
+        android:src="@drawable/config"
         android:clickable="True"
         android:layout_marginLeft="40dp"
        />
        
        
        <ImageView
-        android:id="@+id/dash_consumo"
+        android:id="@+id/dash_cadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/beer_icon"
+        android:src="@drawable/perfil"
         android:clickable="True"
         android:layout_marginLeft="40dp"
        />
@@ -57,7 +60,7 @@
 	        android:id="@+id/dash_estatistica"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:src="@drawable/statistics_icon"
+	        android:src="@drawable/stats"
 	        android:clickable="True"
 	        android:layout_marginLeft="40dp"
 	       />

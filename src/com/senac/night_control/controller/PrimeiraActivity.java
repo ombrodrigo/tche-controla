@@ -1,24 +1,21 @@
 package com.senac.night_control.controller;
 
-import com.senac.night_control.R;
-import com.senac.night_control.R.id;
-import com.senac.night_control.R.layout;
-import com.senac.night_control.R.menu;
-
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.os.Build;
+import android.widget.ImageView;
+
+import com.senac.night_control.R;
 
 public class PrimeiraActivity extends ActionBarActivity {
 
+	ImageView cadastro,consumo;
 
 	
 	@Override
@@ -36,6 +33,7 @@ public class PrimeiraActivity extends ActionBarActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		InstanciarVariaveis();
+		Listeners();
 		
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.primeira, menu);
@@ -76,7 +74,25 @@ public class PrimeiraActivity extends ActionBarActivity {
 
 		
 		 Bundle extras = getIntent().getExtras();
+		 cadastro=(ImageView)findViewById(R.id.dash_cadastro);
+		 consumo=(ImageView)findViewById(R.id.dash_consumo);
+				 
 
 	} 
 
+	public void Listeners()
+	{
+		consumo.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Intent intentConsumo=new Intent(getBaseContext(),Consumo.class);
+				
+				startActivity(intentConsumo);
+				
+			}
+		});
+		
+		
+	}
 }

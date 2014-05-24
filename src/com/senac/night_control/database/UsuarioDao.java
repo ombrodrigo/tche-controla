@@ -16,11 +16,9 @@ import android.util.Log;
 public class UsuarioDao extends SQLiteOpenHelper {
 
 	private static final String TABELA = "Usuario";
-	 private static final int VERSION = 1;
+	private static final int VERSION = 1;
 	private static final String[] COLUNAS = {"nome","email","login","senha","ajuda_Nome","ajuda_Telefone","sessao_ativa"};
 
-	
-	
 	public UsuarioDao(Context context) {
 		super(context, TABELA, null, VERSION);
 		// TODO Auto-generated constructor stub
@@ -39,26 +37,19 @@ public class UsuarioDao extends SQLiteOpenHelper {
 		        " ajuda_Telefone TEXT, " +
 		        " sessao_ativa INTEGER" +");";
 		
-
-		
 		     db.execSQL(sql);
 		     
 
 		     Log.w("Ok", "Database was created");
-		    
-		
 		
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		
 		db.execSQL("Drop Table " + UsuarioDao.TABELA);
 	      this.onCreate(db);
 		
 	}
-	
-
 	
 	public void inserir(Usuario usuario){
 	      

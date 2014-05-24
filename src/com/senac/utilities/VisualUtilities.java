@@ -1,6 +1,7 @@
 package com.senac.utilities;
 
-import android.R;
+//import android.R;
+import com.senac.night_control.R;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -26,7 +27,7 @@ public class VisualUtilities extends ActionBarActivity {
 		   }
 		});
 		// Set the Icon for the Dialog
-		alertDialog.setIcon(R.drawable.ic_dialog_alert);
+		alertDialog.setIcon(R.drawable.ic_launcher);
 		alertDialog.show();
 	}
 	

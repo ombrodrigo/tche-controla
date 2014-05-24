@@ -6,16 +6,19 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="16" />
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" android:hardwareAccelerated="true">
+        android:theme="@style/AppTheme" >
         <activity
-            android:name="com.senac.night_control.controller.PrincipalActivity"
-            android:label="@string/app_name" >
+            android:name="com.senac.night_control.controller.SplashScreen"
+            android:label="@string/app_name"
+            
+             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,6 +32,14 @@
         <activity
             android:name="com.senac.night_control.controller.PrimeiraActivity"
             android:label="@string/title_activity_primeira" >
+        </activity>
+        <activity
+            android:name="com.senac.night_control.controller.Consumo"
+            android:label="@string/title_activity_consumo" >
+        </activity>
+        <activity
+            android:name="com.senac.night_control.controller.PrincipalActivity"
+            android:label="@string/app_name" >
         </activity>
     </application>
 

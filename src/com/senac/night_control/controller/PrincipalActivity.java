@@ -124,7 +124,7 @@ public class PrincipalActivity extends ActionBarActivity {
 				} catch (Exception e) {
 					// TODO: handle exception
 				}
-				
+			
 				
 				for(Usuario usuario: usuarios)
 				{  
