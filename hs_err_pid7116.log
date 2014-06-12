@@ -1,0 +1,108 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (javaClasses.cpp:129), pid=7116, tid=6880
+#  fatal error: Invalid layout of preloaded class
+#
+# JRE version: 7.0_15-b03
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (23.7-b01 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000001f1d000):  JavaThread "Unknown thread" [_thread_in_vm, id=6880, stack(0x00000000020d0000,0x00000000021d0000)]
+
+Stack: [0x00000000020d0000,0x00000000021d0000]
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000001f1d000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=6880, stack(0x00000000020d0000,0x00000000021d0000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.012 loading class 0x0000000001da03e0 done
+Event: 0.013 loading class 0x0000000001d64d90 done
+Event: 0.013 loading class 0x0000000001d64d60
+Event: 0.013 loading class 0x0000000001df63c0
+Event: 0.013 loading class 0x0000000001df63c0 done
+Event: 0.013 loading class 0x0000000001df6400
+Event: 0.013 loading class 0x0000000001df6400 done
+Event: 0.013 loading class 0x00000000086ff750
+Event: 0.013 loading class 0x00000000086ff750 done
+Event: 0.013 loading class 0x0000000001d64d60 done
+
+
+Dynamic libraries:
+0x000000013f2f0000 - 0x000000013f323000 	U:\PROGRAMAS\DESENVOLVIMENTO\JAVA\ANDROID\ADT-BUNDLE-WINDOWS-X86_64-20140321\ECLIPSE\JRE\BIN\JAVAW.EXE
+0x0000000077280000 - 0x0000000077429000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077060000 - 0x000000007717f000 	C:\Windows\system32\kernel32.dll
+0x000007fefd400000 - 0x000007fefd46b000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefdd10000 - 0x000007fefddeb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefedf0000 - 0x000007fefee8f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefdb00000 - 0x000007fefdb1f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefec10000 - 0x000007fefed3d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077180000 - 0x000000007727a000 	C:\Windows\system32\USER32.dll
+0x000007feff220000 - 0x000007feff287000 	C:\Windows\system32\GDI32.dll
+0x000007fefddf0000 - 0x000007fefddfe000 	C:\Windows\system32\LPK.dll
+0x000007fefd6a0000 - 0x000007fefd769000 	C:\Windows\system32\USP10.dll
+0x000007fefc8f0000 - 0x000007fefcae4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefde00000 - 0x000007fefde71000 	C:\Windows\system32\SHLWAPI.dll
+0x000007feff330000 - 0x000007feff35e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefd9f0000 - 0x000007fefdaf9000 	C:\Windows\system32\MSCTF.dll
+0x000000006c970000 - 0x000000006ca41000 	U:\PROGRAMAS\DESENVOLVIMENTO\JAVA\ANDROID\ADT-BUNDLE-WINDOWS-X86_64-20140321\ECLIPSE\JRE\bin\msvcr100.dll
+0x000000005c930000 - 0x000000005d04f000 	U:\PROGRAMAS\DESENVOLVIMENTO\JAVA\ANDROID\ADT-BUNDLE-WINDOWS-X86_64-20140321\ECLIPSE\JRE\bin\server\jvm.dll
+0x000007fef7fb0000 - 0x000007fef7fb9000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefeda0000 - 0x000007fefeded000 	C:\Windows\system32\WS2_32.dll
+0x000007fefdb20000 - 0x000007fefdb28000 	C:\Windows\system32\NSI.dll
+0x000007fefc890000 - 0x000007fefc8cb000 	C:\Windows\system32\WINMM.dll
+0x0000000077440000 - 0x0000000077447000 	C:\Windows\system32\PSAPI.DLL
+0x000000006e290000 - 0x000000006e29f000 	U:\PROGRAMAS\DESENVOLVIMENTO\JAVA\ANDROID\ADT-BUNDLE-WINDOWS-X86_64-20140321\ECLIPSE\JRE\bin\verify.dll
+0x000000006e260000 - 0x000000006e288000 	U:\PROGRAMAS\DESENVOLVIMENTO\JAVA\ANDROID\ADT-BUNDLE-WINDOWS-X86_64-20140321\ECLIPSE\JRE\bin\java.dll
+0x000000006e240000 - 0x000000006e255000 	U:\PROGRAMAS\DESENVOLVIMENTO\JAVA\ANDROID\ADT-BUNDLE-WINDOWS-X86_64-20140321\ECLIPSE\JRE\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 -Xbootclasspath:U:\Programas\Desenvolvimento\Java\Android\adt-bundle-windows-x86_64-20140321\sdk\platforms\android-19\android.jar 
+java_command: com.senac.Testes.TesteAddBebidas
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=U:/Programas/Desenvolvimento/Java/Android/adt-bundle-windows-x86_64-20140321/eclipse/jre/bin/server;U:/Programas/Desenvolvimento/Java/Android/adt-bundle-windows-x86_64-20140321/eclipse/jre/bin;U:/Programas/Desenvolvimento/Java/Android/adt-bundle-windows-x86_64-20140321/eclipse/jre/lib/amd64;C:\Program Files\Internet Explorer;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;U:\Programas\Desenvolvimento\Java\Android\adt-bundle-windows-x86_64-20140321\eclipse;
+USERNAME=Fernando
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 4099984k(1491380k free), swap 8198104k(4330128k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (23.7-b01) for windows-amd64 JRE (1.7.0_15-b03), built on Feb 15 2013 13:43:57 by "java_re" with unknown MS VC++:1600
+
+time: Tue May 06 20:15:11 2014
+elapsed time: 0 seconds
+

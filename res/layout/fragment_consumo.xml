@@ -6,8 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.senac.night_control.Consumo$PlaceholderFragment"
-    android:background="@drawable/background" >
+    tools:context="com.senac.night_control.Consumo$PlaceholderFragment" >
     
     
     
@@ -66,17 +65,18 @@
         
         </TableRow>
 
+    	 <Button
+    	     android:id="@+id/addBira"
+    	     style="?android:attr/buttonStyleSmall"
+    	     android:layout_width="wrap_content"
+    	     android:layout_height="wrap_content"
+    	     android:layout_marginTop="113dp"
+    	     android:text="Button" />
+    	 
+ 
+    	 
+    	 
     
      </TableLayout>
-     
-      <ImageView
-	        android:id="@+id/addBira"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_below="@+id/tableLayout1"
-	        android:layout_centerHorizontal="true"
-	        android:layout_marginLeft="80dp"
-	        android:layout_marginTop="90dp"
-	        android:src="@drawable/add" />
 
 </RelativeLayout>

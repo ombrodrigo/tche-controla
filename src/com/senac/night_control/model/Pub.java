@@ -5,8 +5,8 @@ public class Pub {
 	private int id;
 	private String pub_nome;
 	
-	public Pub(int id, String pub_nome) {
-		this.id = id;
+	public Pub(String pub_nome) {
+
 		this.pub_nome = pub_nome;
 	}
 	

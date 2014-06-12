@@ -15,7 +15,7 @@ public class Usuario {
 	
 	public Usuario(String nome, String email, String login, String senha,
 			String ajuda_Nome, String ajuda_Telefone, Boolean sessao_ativa) {
-		//super();
+		super();
 		this.nome = nome;
 		this.email = email;
 		this.login = login;
@@ -88,6 +88,11 @@ public class Usuario {
 	public void setSessao_ativa(Boolean sessao_ativa) {
 		this.sessao_ativa = sessao_ativa;
 	}
+	
+	
+	
+	
+	
 	
 
 }

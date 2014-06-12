@@ -20,6 +20,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.senac.night_control.R;
+import com.senac.night_control.database.FestaDao;
+import com.senac.night_control.database.PubDao;
 import com.senac.night_control.database.UsuarioDao;
 import com.senac.night_control.model.Usuario;
 import com.senac.utilities.VisualUtilities;
@@ -40,7 +42,11 @@ public class PrincipalActivity extends ActionBarActivity {
 		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		
 		setContentView(R.layout.activity_principal);
+		
 		UsuarioDao user=new UsuarioDao(this);
+		PubDao pub=new PubDao(this);
+		FestaDao party=new FestaDao(this);
+
 
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
@@ -124,7 +130,7 @@ public class PrincipalActivity extends ActionBarActivity {
 				} catch (Exception e) {
 					// TODO: handle exception
 				}
-			
+				
 				
 				for(Usuario usuario: usuarios)
 				{  

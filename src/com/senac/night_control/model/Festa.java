@@ -10,14 +10,16 @@ public class Festa {
 	private int nota_festa;
 	private Pub Pub;
 	private Usuario Usuario;
+	private String FestaNome;
 
-	public Festa(int id, int pub_id, int usuario_id, String data_hora, double consumo_limite, int nota_festa) {
+	public Festa(int id,String FestaNome ,int pub_id, int usuario_id, String data_hora, double consumo_limite, int nota_festa) {
 		this.id = id;
 		this.pub_id = pub_id;
 		this.usuario_id = usuario_id;
 		this.data_hora = data_hora;
 		this.consumo_limite = consumo_limite;
 		this.nota_festa = nota_festa;
+		this.FestaNome = FestaNome;
 	}
 
 	public int getId() {
@@ -27,7 +29,7 @@ public class Festa {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	public int getPub_id() {
 		return pub_id;
 	}
@@ -67,14 +69,6 @@ public class Festa {
 	public void setNota_festa(int nota_festa) {
 		this.nota_festa = nota_festa;
 	}
-	
-	public Usuario getUsuario() {
-		return Usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
-		Usuario = usuario;
-	}
 
 	public Pub getPub() {
 		return Pub;
@@ -83,5 +77,24 @@ public class Festa {
 	public void setPub(Pub pub) {
 		Pub = pub;
 	}
+
+	public Usuario getUsuario() {
+		return Usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		Usuario = usuario;
+	}
+
+	public String getFestaNome() {
+		return FestaNome;
+	}
+
+	public void setFestaNome(String festaNome) {
+		FestaNome = festaNome;
+	}
+
+
+	
 	
 }

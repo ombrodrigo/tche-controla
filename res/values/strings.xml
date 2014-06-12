@@ -36,6 +36,7 @@
     <string name="pergunta_festa">Qual o nome da festa que vocês está?</string>
     <string name="pergunta_gasto">Qual será o seu limite de gastos hoje?</string>
     <string name="pergunta_bebida">Qual o valor da bebida de hoje?</string>
-    <string name="error_maximum_empty">Para prosseguir preencha o campo acima</string>
+    <string name="title_activity_party_list_view">PartyListView</string>
+    <string name="pergunta_pub">Qual o nome do estabelecimento que você está?</string>
 
 </resources>
