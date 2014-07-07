@@ -38,5 +38,9 @@
     <string name="pergunta_bebida">Qual o valor da bebida de hoje?</string>
     <string name="title_activity_party_list_view">PartyListView</string>
     <string name="pergunta_pub">Qual o nome do estabelecimento que você está?</string>
+    <string name="title_consumo_add_bebida">Gasto Atual</string>
+    <string name="valor_bebida">Valor da Bebida</string>
+    <string name="gasto_maximo">Gasto Máximo</string>
+    <string name="quantidade_disponivel">Quantas ainda posso beber?</string>
 
 </resources>

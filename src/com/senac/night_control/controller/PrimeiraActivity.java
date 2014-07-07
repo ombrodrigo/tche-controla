@@ -1,5 +1,8 @@
 package com.senac.night_control.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,12 +13,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.senac.night_control.R;
+import com.senac.night_control.R.string;
+import com.senac.night_control.model.Usuario;
 
 public class PrimeiraActivity extends ActionBarActivity {
 
 	ImageView cadastro,consumo;
+	TextView bemVindo;
 
 	
 	@Override
@@ -76,6 +83,9 @@ public class PrimeiraActivity extends ActionBarActivity {
 		 Bundle extras = getIntent().getExtras();
 		 cadastro=(ImageView)findViewById(R.id.dash_cadastro);
 		 consumo=(ImageView)findViewById(R.id.dash_consumo);
+		 bemVindo=(TextView)findViewById(R.id.labelBemVindo);
+		 
+		 GetUser();
 				 
 
 	} 
@@ -88,6 +98,14 @@ public class PrimeiraActivity extends ActionBarActivity {
 			public void onClick(View arg0) {
 				Intent intentConsumo=new Intent(getBaseContext(),Consumo.class);
 				
+				List<String> dataAboutUser=GetUser();
+				
+				
+				intentConsumo.putExtra( "nome", dataAboutUser.get(0));
+				intentConsumo.putExtra( "login", dataAboutUser.get(1));
+				intentConsumo.putExtra( "id", dataAboutUser.get(2));
+				   
+				
 				startActivity(intentConsumo);
 				
 			}
@@ -95,4 +113,27 @@ public class PrimeiraActivity extends ActionBarActivity {
 		
 		
 	}
+
+	public List<String> GetUser()
+	{
+		
+	List<String> dadosUsuario=new ArrayList<String>();
+		
+		Intent intent=getIntent();
+		
+	
+		String nome=intent.getStringExtra("nome");
+		String login=intent.getStringExtra("login");
+		String idUser=intent.getStringExtra("id");
+
+		
+		dadosUsuario.add(nome);
+		dadosUsuario.add(login);
+		dadosUsuario.add(idUser);
+		
+		
+		
+		return dadosUsuario;
+	}
+
 }

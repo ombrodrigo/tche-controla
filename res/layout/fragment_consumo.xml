@@ -10,73 +10,87 @@
     
     
     
-    <TableLayout 
-    android:id="@+id/tableLayout1"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content" >
- 
-      <!-- 2 columns -->
-    <TableRow
-        android:id="@+id/tableRow1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dip" >
-        
-        <TextView
-        android:id="@+id/label_gasto"
-        android:text="QuantoGastei: " />
-        
-        <TextView
-        android:id="@+id/gasto"
-        android:text="0" />
-        
-        </TableRow>
-        
-    
-    	 <TableRow
-        android:id="@+id/tableRow2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dip" >
-        
-        <TextView
-        android:id="@+id/label_maximo"
-        android:text="Gasto Máximo: " />
-        
-    <TextView
-        android:id="@+id/maximo"
-        android:text="0" />
-        
-        </TableRow>
-        
-    	 <TableRow
-        android:id="@+id/tableRow3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dip" >
-        
-        <TextView
-        android:id="@+id/label_qtsAinda"
-        android:text="Ainda posso tomar : " />
-        
-       <TextView
-        android:id="@+id/qtsFalta"
-        android:text="0" />
-        
-        </TableRow>
 
-    	 <Button
-    	     android:id="@+id/addBira"
-    	     style="?android:attr/buttonStyleSmall"
-    	     android:layout_width="wrap_content"
-    	     android:layout_height="wrap_content"
-    	     android:layout_marginTop="113dp"
-    	     android:text="Button" />
-    	 
- 
-    	 
-    	 
-    
-     </TableLayout>
+     
+       <TextView
+    	         android:id="@+id/textView1"
+    	         android:layout_width="wrap_content"
+    	         android:layout_height="wrap_content"
+    	         android:text="@string/title_consumo_add_bebida"
+    	         android:textAppearance="?android:attr/textAppearanceMedium"
+    	         android:textSize="30dp"
+    	         android:layout_marginLeft="80dp" />
+
+    <TextView
+        android:id="@+id/id_lbl_limite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignRight="@+id/imageView2"
+        android:text="@string/gasto_maximo"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+
+    <TextView
+        android:id="@+id/lblCoastMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/et_drinkSetValueS"
+        android:layout_alignLeft="@+id/id_lbl_limite"
+        android:text="0.00"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffb600"
+        android:textSize="19dp"
+         />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="20dp"
+        android:text="@string/valor_bebida"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/et_drinkSetValueS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_toLeftOf="@+id/textView2"
+        android:text="0.00"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffb600"
+        android:textSize="19dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/linha" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:text="0.00"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="70dp" />
+
+    <ImageButton
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/lblCoastMax"
+        android:layout_below="@+id/textView2"
+        android:src="@drawable/bt_cons"/>
 
 </RelativeLayout>

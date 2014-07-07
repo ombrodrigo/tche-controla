@@ -17,7 +17,7 @@ public class UsuarioDao extends SQLiteOpenHelper {
 
 	private static final String TABELA = "Usuario";
 	 private static final int VERSION = 1;
-	private static final String[] COLUNAS = {"nome","email","login","senha","ajuda_Nome","ajuda_Telefone","sessao_ativa"};
+	private static final String[] COLUNAS = {"nome","email","login","senha","ajuda_Nome","ajuda_Telefone","sessao_ativa","id"};
 
 	
 	
@@ -92,6 +92,7 @@ public class UsuarioDao extends SQLiteOpenHelper {
 	    	  usuario.setAjuda_Nome(c.getString(4));
 	    	  usuario.setAjuda_Telefone(c.getString(5));
 	    	  usuario.setSessao_ativa(c.getString(6)=="1"?true:false);
+	    	  usuario.setId(Integer.parseInt(c.getString(7)));
 	    	 /* usuario.setMaiorDeIdade(true);*/
 	    	  
 	 

@@ -1,5 +1,8 @@
 package com.senac.utilities;
 
+import com.senac.night_control.controller.Consumo;
+import com.senac.night_control.model.FestaConsumo;
+
 public class DataMananger {
 	
 	private double gastos,qtQueroGastar,precoBebida;
@@ -31,12 +34,17 @@ public class DataMananger {
 	}
 	
 	
-	public boolean AddBebida()
+	public boolean AddBebida(FestaConsumo consumo)
 	{
 		if(getQuantidadeQuePossoBeber()>0)
 		{		
 			setQuantasBebi(getQuantasBebi()+1);
 			setGastos(getGastos()+getPrecoBebida());
+			
+			consumo.setQuantidade_consumida(getQuantasBebi());
+			
+			Consumo bebendo=new Consumo();
+			
 			
 			return true;
 		}else{
@@ -48,6 +56,7 @@ public class DataMananger {
 		
 		
 	}
+	
 	
 	
 	
@@ -92,9 +101,4 @@ public class DataMananger {
 	}
 	
 	
-	
-
-	
-	
-
 }

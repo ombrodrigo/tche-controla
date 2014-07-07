@@ -32,6 +32,7 @@ public class PrincipalActivity extends ActionBarActivity {
 	private Button conectar;
 	private EditText login,senha;
 	private TextView negado;
+	private String idUser;
 	private VisualUtilities visual;
 
 	@Override
@@ -110,6 +111,7 @@ public class PrincipalActivity extends ActionBarActivity {
 		login=(EditText)findViewById(R.id.et_login);
 		senha=(EditText)findViewById(R.id.et_senha);
 		negado=(TextView)findViewById(R.id.tv_acess_negado);
+		idUser="";
 		
 	}
 	
@@ -137,6 +139,7 @@ public class PrincipalActivity extends ActionBarActivity {
 					 if(usuario.getLogin().equals(login.getText().toString()) && usuario.getSenha().equals(senha.getText().toString()))
 					 {							
  
+						idUser="s"+usuario.getId();
 						GeneratePopupWelcome(this, R.string.bem_vindo ,R.string.sessao_ativa,usuario.getLogin(),visual.SplitName(usuario.getNome()));
 						 achou=true;
 					 }
@@ -179,6 +182,8 @@ public class PrincipalActivity extends ActionBarActivity {
 			   //put extra envia valores a intent que está sendo chamada através de um hashmap de chave e valor
 			   intentBemVindo.putExtra( "nome", nome);
 			   intentBemVindo.putExtra( "login", user);
+			   intentBemVindo.putExtra( "id", idUser);
+			   
 			   
 			   //iniciando a activity
 			   startActivity(intentBemVindo);

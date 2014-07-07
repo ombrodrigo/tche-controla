@@ -49,6 +49,7 @@ public class PubDao extends SQLiteOpenHelper {
 		ContentValues valores = new ContentValues();
 	    	valores.put("pub_nome", pub.getPub_nome());
 	    	
+
 	    	try {
 	    		getWritableDatabase().insert(TABELA, null, valores);
 	    	} catch (SQLException e) {
@@ -79,7 +80,7 @@ public class PubDao extends SQLiteOpenHelper {
 	 }
 
 	
-	public Boolean verifyUniquePubInBd(String login) {
+	public Boolean verifyUniquePubInBd(String pubName) {
 		Cursor c = null;
 		boolean achou = false;
 		try {
@@ -88,7 +89,7 @@ public class PubDao extends SQLiteOpenHelper {
 
 			while (c.moveToNext()) {
 
-				if (c.getString(1).equals(login)) {
+				if (c.getString(1).equals(pubName)) {
 					achou = true;
 					break;
 				}
@@ -101,6 +102,39 @@ public class PubDao extends SQLiteOpenHelper {
 
 		return achou;
 
+	}
+
+	public Pub verifyEntityInDatabase(String pubName)
+	{
+		
+		Cursor c = null;
+		boolean achou = false;
+		
+		Pub pubEntity=new Pub(pubName);
+		
+		try {
+			c = getReadableDatabase().query(TABELA, COLUNAS, null, null, null,
+					null, null);
+			
+						
+			while (c.moveToNext()) {
+
+				if (c.getString(1).equals(pubName)) {
+					
+					
+					pubEntity.setId(Integer.parseInt(c.getString(0)));					
+					
+					return pubEntity;
+				}
+
+			}
+		} finally {
+			if (c != null)
+				c.close();
+		}
+
+		return pubEntity;
+		
 	}
 	
 }
